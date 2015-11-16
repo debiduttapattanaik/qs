@@ -1,0 +1,468 @@
+/*******************************************
+***          YT Framework: less          ***
+*******************************************/
+
+// --* Module Templates *------------------
+// ----------------------------------------
+/*   1.Large devices Desktops     ( Devices ≥1200px)
+ *   2.Medium devices Desktops    (980px ≥ Devices ≥ 1024px)
+ *   3.Small devices Tablets      (767px ≥ Devices ≥ 979px)
+ *   4.Extra small devices Phones ( Devices <767px)
+ */
+
+
+// Bootstrap mixins
+@import "variables.less";
+@import "../asset/bootstrap/less/mixins.less";
+@import "utilities.less";
+
+#bd{ width: auto;
+     
+     // 1.Large devices Desktops 
+     // --------------------------------------------------
+     @media (min-width: 1200px) {
+          //Hidden Resmenu layout boxed
+          .layout-boxed + .yt-off-resmenu{visibility: hidden;}
+          .move + .yt-off-resmenu{visibility: visible;}
+          
+          // Show Sidebar Menu Desktop
+          .mm-opened+ .mm-page .menu-fixed{width: auto;left: auto;right: auto;}
+               
+          #yt_mainmenu .yt-resmenu{position: absolute;right:0px;top: 0;
+               a{line-height: 38px;background: transparent;
+                    .fa{font-size: 18px;color: #999;}
+               }
+               a:hover{background: @gray;
+                    .fa{color: @white;}
+               }
+          }
+          
+     }
+     
+     // 2.Medium devices Desktops 
+     // --------------------------------------------------
+     @media (min-width: 980px) and (max-width: 1199px) {
+          
+          //Layout-Templates
+          .container{width: 980px;}
+          .layout-boxed{background: #F6F6F6;}
+         
+          // Show Sidebar Menu Desktop
+          .mm-opened+ .mm-page{
+               .menu-fixed{width: auto;left: auto !important;right: auto;}
+          }
+          #yt_mainmenu .yt-resmenu{position: absolute;right:0px;top: 0;
+               a{line-height: 38px;background: transparent;
+                    .fa{font-size: 18px;color: #999;}
+               }
+               a:hover{background: @background1;
+                    .fa{color: @white;}
+               }
+          }
+          
+          #yt_spotlight2 .module .item {padding: 0px 25px;}
+          #yt_mainmenu #meganavigator li.level1 > .item-link{padding: 12px 24px;}
+         
+          //Joomla Core
+          .blog {
+               .items-leading .item{
+                    .item-image{float: none !important;margin: 0px 0px 20px 0px;display: inline-block;}
+                    &.span4,
+                    &.span6,
+                    &.span3 {
+                         .item-image{display: block ;height: 100%;min-width: inherit !important;min-height: inherit !important;
+                              .img_caption{width: auto !important;}
+                         }
+                    }
+                    
+               }
+               .items-row .item{
+                    .item-image{float: none !important;margin: 0px 0px 20px 0px;display: inline-block;min-height: inherit !important;min-width: inherit !important;}
+                    &.col-sm-3,
+                    &.col-sm-4,
+                    &.col-sm-6 {
+                         .item-image{display: block;height: 100%;min-width: inherit !important;min-height: inherit !important;
+                              img{max-width: 100% ; display: block ;}
+                              .img_caption{width: auto !important;}
+                         }
+                    }
+               }
+               
+               //Feature
+               &.blog-featured .items-row .item .item-image {min-height: inherit !important;min-width: inherit !important;display: block;}
+               
+          }
+          
+          // Article
+          .item-page {
+               .btn.btn-flat {font-size: 14px;}
+               .dt-list {width: 47%;}
+          }
+          
+          //Tags Category
+          .tag-category ul.items-row .item .item-image {float: none !important;margin: 0px 0px 20px 0px;display: inline-block;}
+          
+          
+          //Module
+               //Social
+               #social .poscenter {margin-left: 50px !important;}
+               
+               //Search
+               #mod-finder-searchform {margin: 3px 0 0;
+                    input.inputbox {width: 185px;}
+               }
+               
+               //Login
+               .yt-loginform .dropdown-menu {min-width: 190px;}
+               .mod-languages {
+                   
+                    .dropdown-menu  {min-width: 150px;
+                         li a {font-size: 12px;padding: 7px 5px;
+                              img {margin-top: 3px;}
+                         }
+                    }
+               }
+               .form-vertical {padding: 14px 5px;
+                    .login-greeting {font-size: 12px;margin: 4px 4px 0 0;}
+                    .logout-button .btn {padding: 3px 1px 3px 8px;}
+               }
+               
+               //Language
+               .mod-languages ul.dropdown-menu {min-width: 150px;}
+               
+               //Accordion
+               div.sj-accordion .acd-items .acd-item .acd-content-wrap .acd-content-wrap-inner .acd-content {padding: 10px;
+                    .acd-description {font-size: 12px;}
+               }
+               
+               //Basic News
+               div.bsn-wrap.theme3 .item {
+                    .basicnews-desc {padding: 10px;font-size: 12px;}
+                    .basicnews-info {padding:5px 10px 20px;}
+               }
+               
+               //Sj Carousel
+               .carousel .carousel-caption{
+                    h4{font-size: 130%;margin: 0;}
+                    p{display: none;}
+               }
+              // .module.slider .modcontent .carousel .carousel-inner .item .carousel-caption h4 a {font-size: 22px;}
+          
+          //RTL Language
+          &.rtl {
+               
+               //Social
+               #social .poscenter {margin-left: 5px !important;margin-right: 40px !important;}
+               
+               //Search
+               #mod-finder-searchform {
+                    input.inputbox {margin-right: 28px;}
+                    .button {left: 10px;}
+               }
+               
+               
+          }
+        
+     }
+     
+     // 3.Small devices Tablets
+     // --------------------------------------------------
+     @media (min-width: 767px) and (max-width: 979px) {
+          
+         //Layout-Templates
+          .container{width: 750px;}
+          
+          // Core Joomla
+         
+          
+          //System Tool
+         
+         
+          //Layout-Templates
+          #yt_logo img{height: auto !important;}
+          #yt_spotlight2 .module .item {padding: 0px 10px;}
+        
+          //Responsive Mainmenu
+          #yt_mainmenu {
+               ul.navi{display: none;}
+               div.yt-resmenu{display: block;}
+          }
+
+          
+
+          
+          //Sj Carousel
+          .carousel .carousel-caption{
+               h4{font-size: 130%;margin: 0;}
+               p{display: none;}
+          }
+          .mod-languages ul.dropdown-menu{min-width: 125px;}
+         
+          //Generic Article Style
+          .blog-featured .items-row .item .item-image{display: inline-block;}
+          .blog {
+               .items-leading .item{
+                    &.span4,
+                    &.span6,
+                    &.span3 {
+                         .item-image{display: block !important;min-width: inherit !important;min-height: inherit !important;
+                              .img_caption{width: auto !important;}
+                         }
+                    }
+                    .item-image{float: none !important;display: inline-block;margin: 0 0 20px;}
+               }
+               .items-row .item{
+                    &.col-sm-3,
+                    &.col-sm-4,
+                    &.col-sm-6 {
+                         .item-image{display: block!important;min-width: inherit !important;min-height: inherit !important;float: none !important;
+                              .img_caption{width: auto !important;}
+                         }
+                    }
+                    .item-image{float: none !important;display: inline-block;margin: 0 0 20px;}
+               }
+          }
+          .item-page {
+               .btn.btn-flat {padding: 5px 15px;font-size: 12px;}
+               .related-items .img-fulltext {display: inline-block;}
+               .g-pageteam .b-ourteam .col-sm-6.first {clear: both;}
+               .dt-list {width: 47%;}
+          }
+          
+          //Tag Category
+          .tag-category ul.items-row .item .item-image {float: none !important;margin: 0px 0px 20px 0px;display: inline-block;}
+          
+          //Modules
+               //Basic News
+               div.bsn-wrap {
+                    &.theme2 .item {margin-bottom: 30px;
+                         .bsn-image .alignleft {width: 100% !important;}
+                    }
+                    &.theme3 .item {
+                         .bsn-image .alignleft {width: 100% !important;}
+                    }
+               }
+               
+               
+               //Login
+               .yt-loginform .dropdown-menu {min-width: 188px;}
+               .mod-languages {
+                   
+                    .dropdown-menu {
+                         li a {padding: 7px;}
+                    }
+               }
+               .form-vertical  {padding: 15px 5px;
+                    .login-greeting {font-size: 12px;}
+                    .logout-button .btn {padding: 2px 0 2px 6px;}
+               }
+               
+               //Social
+               #social {padding-right: 0px;
+                    .poscenter {margin: -3px 0px 0px 26px!important;
+                         .yt-socialbt {margin-right: 10px;}
+                    }
+               }
+               
+               //Search
+               #search {padding-right: 0px;
+                    #mod-finder-searchform {margin-right: 0px;
+                         #mod-finder-searchword {width: 157px;}
+                    }
+               }
+               
+               //Contact
+               #contact {padding-right: 0px;
+                    .poscenter {margin-top: -4px;
+                         a {font-size: 13px;}
+                         span {font-size: 13px;}
+                    }
+               }
+               
+               //acordion
+               div.sj-accordion .acd-items .acd-item:hover .acd-image a.hover-link {top: 29%;}
+          
+          //RTL Languages
+          &.rtl {
+               //Social
+               #social {padding: 0px;
+                    .poscenter {margin: 3px 0px 0px 0px !important;padding-right: 15px}
+               }
+               
+               //Search
+               #search {padding: 0px;
+                    #mod-finder-searchform {
+                         .button {left: 23px;}
+                         input.inputbox {margin-right: 15px;}
+                    }
+               }
+               
+               //Login
+               .form-vertical {padding: 15px 1px;}
+          }
+     }
+     
+     // 4.Extra small devices Phones
+     // --------------------------------------------------
+     @media (max-width: 767px){
+          
+     // Layout Bootstrap
+     .container {width: 100%;}
+    
+     //Base Joomla
+     table{#flip-scroll();}
+     .btn{white-space:normal;height: auto;}
+     
+     //System-tool
+    
+     //Layout-Templates
+          //Footer
+          #yt_footer {
+               #yt_copyright {margin-bottom: 20px;}
+               #footer {
+                    .pull-right {float: none !important;text-align: center;}
+               }
+          }
+     
+          //Spotlight3
+          #yt_spotlight2 .module .item {padding: 0px ;margin-bottom: 30px;}
+    
+     //Responsive Mainmenu
+     #yt_mainmenu {
+           ul.navi{display: none;}
+           div.yt-resmenu{display: block;}
+     }
+     
+     
+     // Generic Article Styles
+     .blog {
+          .items-leading .item{
+               .item-image{float: none !important;display: block;margin: 0 0 20px;min-height: inherit !important;min-width: inherit !important;}
+          }
+          .items-row .item{
+               .item-image{float: none !important;display: block;margin: 0 0 20px;min-height: inherit !important;min-width: inherit !important;}
+          }
+     }
+     .blog-featured .items-leading,
+     .blog-featured .items-row{
+          .item .item-image{margin: 0 0 20px;float: none;display:block;min-height: inherit !important;min-width: inherit !important;}
+     }
+     .item-page .img-fulltext{display: block;float: none;}
+     .item-page ul.related-items li{margin-bottom: 20px;
+          .img-fulltext{display: inline-block;}     
+     } 
+     .pagination  ul li{margin: 4px 2px;
+           a, span{float: none;display: inline-block;}
+     }
+     
+     //Tag Category
+     .tag-category ul.items-row .item .item-image {float: none !important;display: block;margin: 0px 0px 20px;min-width:inherit !important;min-height:inherit !important;}
+     
+     //Article
+     .item-page {
+          .img-fulltext {float: none !important;}
+          .image {width: 100%;margin: 20px 0px;}
+          .dt-list {width: 100%;margin: 20px 0px;}
+          .notice {padding: 20px 20px 20px 50px;background-position: 12px center;}
+          .article-aside .article-info dd{font-size: 12px;}
+     }
+     div.archive .filter-search{
+          .button{margin-top: 1em;}    
+     }
+     
+     //Search Com
+     #search-form {
+          input.inputbox {margin-bottom: 10px;}
+     }
+     
+     //Reg Form
+     .form-vertical .login-greeting{display: none;}
+     .form-vertical .logout-button{margin: 0 10px;}
+     .registration .form-horizontal .control-label {width: 100%;padding: 0px;}
+     
+     //Module
+          //Header
+          #yt_header .row > div {margin-bottom: 5px;text-align: center;
+               &:before {display: none;}
+               &#social {
+                    .poscenter {margin: 0px auto !important;}
+               }
+               &#contact {
+                    
+                    .poscenter {width: 100%;
+                         ul {width: 100%;overflow: hidden;
+                              li {width: 50%;text-align: center;float: left;
+                                   a {font-size: 13px;}
+                                   span {font-size: 13px !important;}
+                              }
+                         } 
+                    }
+               }
+          }
+          
+          div.contact textarea, div.contact input {width: 90%;}
+          #login {overflow: visible;
+               .mod-languages ul.dropdown-menu {min-width: 121px !important;}
+          }
+          #searchForm .inputbox{margin-bottom: 10px;}
+          //Login
+          .yt-loginform .dropdown-menu {min-width: 190px;}
+          
+          //Basic News
+          div.bsn-wrap {
+               .item {margin-bottom: 30px;
+                    .bsn-image .alignleft {width: 100% !important;}
+               }
+               //Theme3
+               &.theme3 {
+                    .item {margin: 0px;}
+               }
+          }
+          
+          //Acordion
+          div.sj-accordion .acd-items .acd-item:hover .acd-image a.hover-link {top: 30%;}
+     
+     //Slideshow
+     .module.slider .modcontent {padding: 3px;
+          .carousel {
+          .carousel-inner .item {
+                    .carousel-caption {display: none;}
+               }
+               .carousel-indicators {display: none;}
+          } 
+          
+     }
+     
+     //Menu
+     #yt_mainmenu {float: left;padding-right: 0px;}
+     
+     //HTML&CSS
+          //Wellcome
+          .wellcomesj {margin: 0px;
+               h1 {font-size: 30px;}
+               a.button.ourtemplates {margin-bottom: 20px;}
+          }
+          
+          
+     
+     //Component: Login,Register 
+     
+     
+     //Content Joomla
+     
+     //RTL Languages 
+     &.rtl {
+          #login {overflow: visible;
+               .mod-languages ul.dropdown-menu {min-width: 116px !important;}
+          }
+          
+          //Menu
+          #yt_mainmenu {float: right;padding-right: 15px;padding-left: 0px;}
+          
+          
+          //Login
+          
+          }
+          
+     }
+}
